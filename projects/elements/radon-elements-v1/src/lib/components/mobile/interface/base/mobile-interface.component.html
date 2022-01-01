@@ -1,0 +1,25 @@
+<div id="mobile-interface-container" class="fill-backing">
+
+    <!-- MAIN -->
+    <div id="mobile-interface-center-box" class="flex-column contained">
+
+        <!-- <radon-elems-v1-mobile-slide-page class="height-100 width-100"></radon-elems-v1-mobile-slide-page> -->
+
+        <radon-elems-v1-accounts-page class="height-100 width-100 flex-column" *ngIf="(ComponentsController.display_page == 'accounts')"></radon-elems-v1-accounts-page>
+
+
+        <radon-elems-v1-home-page class="height-100 width-100 flex-column" *ngIf="(ComponentsController.display_page == 'home')"></radon-elems-v1-home-page>
+
+
+        <radon-elems-v1-transaction-info-page class="height-100 width-100 flex-column" *ngIf="(ComponentsController.display_page == 'tx_info')"></radon-elems-v1-transaction-info-page>
+
+
+        <radon-elems-v1-sending-page class="height-100 width-100 flex-column" *ngIf="(ComponentsController.display_page == 'sending')"></radon-elems-v1-sending-page>
+
+
+        <radon-elems-v1-receiving-info-page class="height-100 width-100 flex-column" *ngIf="(ComponentsController.display_page == 'receiving_info')"></radon-elems-v1-receiving-info-page>
+
+    </div>
+    <!-- END MAIN -->
+
+</div>

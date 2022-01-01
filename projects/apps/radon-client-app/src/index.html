@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Radon</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="/assets/browserify/bitcore-lib-doge.min.js"></script>
+  <script src="/assets/browserify/buffer.min.js"></script>
+  <script src="/assets/browserify/bip39.min.js"></script>
+  <script src="/assets/browserify/coinkey.min.js"></script>
+  <script src="/assets/browserify/coininfo.min.js"></script>
+  <script src="/assets/browserify/crypto.min.js"></script>
+
+  <script type="text/javascript">
+    var Buffer = require('buffer').Buffer;
+    window.Buffer = Buffer;
+
+    var BitcoreDoge = require('bitcore-lib-doge');
+    
+    var BIP39 = require('bip39');
+
+    var CoinKey = require('coinkey');
+    var CoinInfo = require('coininfo');
+
+    var Crypto = require('crypto');
+  </script>
+
+</head>
+<body>
+  <radon-client-app-root></radon-client-app-root>
+</body>
+</html>

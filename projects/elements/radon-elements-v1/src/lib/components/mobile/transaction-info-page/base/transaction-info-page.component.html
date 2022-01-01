@@ -1,0 +1,114 @@
+<div class="transaction-info-page">
+    <radon-elems-v1-home-page-top-bar></radon-elems-v1-home-page-top-bar>
+
+
+
+    <!-- INFO -->
+    <div class="info-box heavy-round fill-backing-dark padding-large margin-large">
+        <!-- CREATED -->
+        <div class="flex-column padding-med margin-med">
+            <p class="small-text light-text">transaction id</p>
+            <p class="large-text bold-text one-line contained margin-top-med">{{TxInfoPageController.tx_info.txid}}</p>
+        </div>
+        <!-- END CREATED -->
+        
+        
+        <!-- CREATED -->
+        <div class="flex-column padding-med margin-med">
+            <p class="small-text light-text">created</p>
+            <p class="large-text bold-text margin-top-med">{{TxInfoPageController.tx_info.created_string}}</p>
+        </div>
+        <!-- END CREATED -->
+        
+        
+        <!-- TYPE -->
+        <div class="flex-column padding-med margin-med">
+            <p class="small-text light-text">transaction type</p>
+            <p class="large-text bold-text margin-top-med">{{TxInfoPageController.tx_info.direction}}</p>
+        </div>
+        <!-- END TYPE -->
+
+
+
+        <!-- SENDERS -->
+        <div class="flex-column padding-med margin-med" [hidden]="true">
+            <p class="small-text light-text">senders</p>
+            <p class="bold-text margin-top-med">yuedgf87erfguyiedgvf..., +2 more</p>
+        </div>
+        <!-- END SENDERS -->
+
+
+
+
+
+        <!-- RECIPIENTS -->
+        <div class="flex-column padding-med margin-med" [hidden]="true">
+            <p class="small-text light-text">recipients</p>
+            <p class="large-text bold-text margin-top-med">yuedgf87erfguyiedgvf..., +1 more</p>
+        </div>
+        <!-- END RECIPIENTS -->
+
+
+
+
+
+        <!-- MEMO -->
+        <div class="flex-column padding-med margin-med">
+            <p class="small-text light-text">memo</p>
+            <p class="large-text bold-text margin-top-med">{{TxInfoPageController.tx_info.memo}}</p>
+        </div>
+        <!-- END MEMO -->
+
+
+
+
+        <!-- AMOUNT -->
+        <div class="std-height"></div>
+        <div class="amount-box flex-column padding-top-large padding-side-large margin-top-large">
+            <p class="bold-text light-text margin-center">Amount</p>
+
+            <p class="tx-amount-text bold-text margin-top-med margin-center" [ngStyle]="{'font-size': 50 + 'px'}">Ð{{TxInfoPageController.tx_info.amount}}</p>
+        </div>
+        <!-- END AMOUNT -->
+
+
+
+
+        <!-- AMOUNT -->
+        <div class="std-height"></div>
+        <div class="amount-box flex-column padding-top-large padding-side-large margin-top-large">
+
+            <!-- INPUTS -->
+            <div class="inputs-box">
+                <p class="bold-text light-text margin-center">Inputs</p>
+
+                <!-- INPUT ITEM -->
+                <div class="med-height flex-row" *ngFor="let item of TxInfoPageController.tx_info.inputs">
+                    <p class="width-50 light-text one-line contained margin-vert">{{item.address}}</p>
+                    <div class="flex-auto"></div>
+                    <p class="large-text bold-text margin-vert">Ð{{item.value}}</p>
+                </div>
+                <!-- END INPUT ITEM -->
+            </div>
+            <!-- END INPUTS -->
+
+
+
+            <!-- OUTPUTS -->
+            <div class="outputs-box padding-top-med margin-top-large">
+                <p class="bold-text light-text margin-center">Outputs</p>
+
+                <!-- INPUT ITEM -->
+                <div class="med-height flex-row" *ngFor="let item of TxInfoPageController.tx_info.outputs">
+                    <p class="width-50 light-text one-line contained margin-vert">{{item.address}}</p>
+                    <div class="flex-auto"></div>
+                    <p class="large-text bold-text margin-vert">Ð{{item.value}}</p>
+                </div>
+                <!-- END INPUT ITEM -->
+            </div>
+            <!-- END OUTPUTS -->
+        </div>
+        <!-- END AMOUNT -->
+    </div>
+    <!-- END INFO -->
+</div>

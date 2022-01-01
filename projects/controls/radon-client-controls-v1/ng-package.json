@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/controls/radon-client-controls-v1",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

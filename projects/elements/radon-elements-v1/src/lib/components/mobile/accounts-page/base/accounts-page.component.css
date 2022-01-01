@@ -1,0 +1,12 @@
+.accounts-list-scroll-holder::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 30px;
+}
+
+
+.accounts-list-scroll-holder::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: rgb(118, 105, 98);
+    border-radius: 30px;
+} 

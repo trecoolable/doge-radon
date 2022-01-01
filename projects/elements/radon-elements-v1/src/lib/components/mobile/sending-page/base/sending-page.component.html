@@ -1,0 +1,17 @@
+<div class="sending-page flex-auto flex-column contained">
+    <radon-elems-v1-home-page-top-bar></radon-elems-v1-home-page-top-bar>
+
+
+    <div class="stages-holder flex-auto flex-column contained">
+
+        <radon-elems-v1-sending-page-amount-interface class="flex-auto flex-column contained" *ngIf="(SendingPageController.display_stage == 'amount')"></radon-elems-v1-sending-page-amount-interface>
+
+
+        <radon-elems-v1-sending-page-details-interface class="flex-auto flex-column contained" *ngIf="(SendingPageController.display_stage == 'details')"></radon-elems-v1-sending-page-details-interface>
+
+
+        <radon-elems-v1-sending-page-confirm-interface class="flex-auto flex-column contained" *ngIf="(SendingPageController.display_stage == 'confirm')"></radon-elems-v1-sending-page-confirm-interface>
+
+    </div>
+
+</div>

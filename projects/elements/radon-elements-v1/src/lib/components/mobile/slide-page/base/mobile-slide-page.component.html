@@ -1,0 +1,26 @@
+<div id="slide-page-container" class="height-100 width-100 relative fill-company">
+
+    <div class="slide-area flex-column absolute" 
+    (touchstart)="startSlide($event)" 
+    (touchmove)="moveSlide($event)" 
+    (touchend)="endSlide()" 
+    (touchleave)="endSlide()" 
+    (mousedown)="startSlide($event)" 
+    (mousemove)="moveSlide($event)" 
+    (mouseup)="endSlide()" 
+    (mouseleave)="endSlide()">
+
+
+
+        <div #SlideBoxElement  class="slide-box flex-column fill-company-light" [ngClass]="{'smooth': (!slide_active)}" [ngStyle]="{'top': 'calc(100% - (120px + ' + slide_position.diff + 'px))'}">
+            <div class="slide-handle"></div>
+
+            <div class="med-height flex-row margin-center">
+                <p class="white-text margin-vert">Slide Up to Unlock</p>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

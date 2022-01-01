@@ -1,0 +1,34 @@
+/* NETWORK FEE */
+
+.slider-bar {
+    height: 15px;
+    margin: auto 15px;
+}
+
+
+.slider-dot-holder {
+    height: 35px;
+    width: 35px;
+    top: -11px;
+    left: 10px;
+}
+
+
+.slider-lines {
+    margin: auto 5px;
+    height: calc(100% - 10px);
+    width: 3px;
+    /* border-right: 1px solid #333; */
+    /* border-left: 1px solid #333; */
+    opacity: .2;
+}
+
+/* END NETWORK FEE */
+
+
+
+/* AMOUNT */
+.amount-value-text {
+    /* margin: auto; */
+}
+/* END AMOUNT */

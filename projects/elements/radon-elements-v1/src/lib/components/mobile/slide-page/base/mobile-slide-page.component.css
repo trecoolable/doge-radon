@@ -1,0 +1,31 @@
+/* SLIDER */
+.slide-area {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-box {
+    top: calc(100% - 120px);
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    min-height: 100%;
+}
+
+.slide-box.smooth {
+    transition: all 200ms ease;
+}
+
+
+.slide-handle {
+    margin: 10px auto;
+    height: 12px;
+    width: calc(100% - 120px);
+    max-width: 250px;
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: 30px;
+}
+/* END SLIDER */

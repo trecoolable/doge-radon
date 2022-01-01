@@ -1,0 +1,23 @@
+/* TRANSACTIONS */
+
+.transactions-tab-item {
+    width: 80px;
+    padding: 0px 5px;
+    border-radius: 30px;
+}
+
+
+.transactions-list-scroll-holder::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 30px;
+}
+
+
+.transactions-list-scroll-holder::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: rgb(118, 105, 98);
+    border-radius: 30px;
+}
+
+/* END TRANSACTIONS */

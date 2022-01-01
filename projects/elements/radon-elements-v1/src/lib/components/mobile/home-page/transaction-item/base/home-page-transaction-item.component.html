@@ -1,0 +1,49 @@
+<div class="transaction-item-box flex-row med-round padding-med" [ngClass]="{'fill-backing-light': (true), 'fill-backing-dark': (false)}" (click)="openTxPage()">
+     <!-- INFO -->
+     <div class="info-box flex-auto flex-column padding-side-med margin-med">
+         <!-- TXID -->
+         <div class="txid-box flex-row contained margin-top-small">
+             <p class="txid-text tiny-text light-text one-line contained margin-vert">txid: {{tx_info.txid}}</p>
+         </div>
+         <!-- END TXID -->
+         
+         
+        
+         <!-- AMOUNT -->
+         <div class="flex-row margin-top-med">
+             <p class="tx-amount-text bold-text light-text">{{tx_info.amount}}</p>
+            </div>
+        <!-- END AMOUNT -->
+        
+        
+        <!-- MEMO -->
+        <div class="memo-box flex-row contained margin-top-small">
+            <p class="memo-text small-text light-text one-line contained margin-vert">{{tx_info.memo}}</p>
+        </div>
+        <!-- END MEMO -->
+    </div>
+    <!-- END INFO -->
+
+
+
+
+
+    <!-- DETAILS -->
+    <div class="flex-auto"></div>
+    <div class="details-box flex-column margin-side-med">
+        <!-- CREATED -->
+        <div class="med-height flex-row">
+            <p class="tiny-text margin-side-med margin-vert">{{tx_info.created_string}}</p>
+        </div>
+        <!-- END CREATED -->
+
+
+        <!-- TYPE -->
+        <div class="flex-auto"></div>
+        <div class="std-square flex-row" style="margin-left: auto;">
+            <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+        </div>
+        <!-- END TYPE -->
+    </div>
+    <!-- END DETAILS -->
+</div>

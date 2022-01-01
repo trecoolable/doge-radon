@@ -1,0 +1,173 @@
+<div class="home-page-holder flex-auto flex-column contained">
+    <!-- TOP BAR -->
+    <radon-elems-v1-home-page-top-bar></radon-elems-v1-home-page-top-bar>
+    <!-- END TOP BAR -->
+
+
+
+    <!-- PROFILE -->
+    <div class="large-height flex-row padding-med padding-top-large margin-med">
+        <!-- NAME -->
+        <div class="flex-row padding-side-med margin-vert">
+            <p class="bold-text light-text margin-side-med">{{HomePageController.account_info.name}}</p>
+        </div>
+        <!-- END NAME -->
+
+
+        <div class="flex-auto"></div>
+
+
+        <!-- ACTIONS -->
+        <div class="flex-row margin-vert">
+            <!-- INFO -->
+            <div class="info-button large-square flex-row med-round fill-neutral margin-side-med margin-vert">
+                <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+            </div>
+            <!-- END INFO -->
+
+
+            
+            <!-- HELP -->
+            <div class="help-button large-square flex-row med-round fill-neutral margin-side-med margin-vert">
+                <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+            </div>
+            <!-- END HELP -->
+        </div>
+        <!-- END ACTIONS -->
+    </div>
+    <!-- END PROFILE -->
+
+
+
+
+
+
+    <!-- BALANCE -->
+    <div class="balance-container flex-column margin-large">
+        <!-- AVAILABLE -->
+        <div class="balance-box flex-column heavy-round fill-backing-dark padding-med">
+            <p class="light-text margin-center margin-top-med margin-bottom-med">Balance</p>
+            
+            
+            <div class="flex-row margin-med">
+                <p class="balance-text bold-text white-text margin-center" [ngStyle]="{'font-size': 50 + 'px'}">Ð{{HomePageController.account_info.balance.available}}</p>
+            </div>
+            
+            
+            <p class="large-text bold-text light-text margin-center margin-top-med margin-bottom-med">DOGE</p>
+        </div>
+        <!-- END AVAILABLE -->
+
+
+        <!-- PENDING -->
+        <div class="med-height flex-row">
+            <p class="small-text light-text margin-center margin-vert" [hidden]="(!HomePageController.account_info.balance.pending)">Ð{{HomePageController.account_info.balance.pending}} pending</p>
+        </div>
+        <!-- END PENDING -->
+    </div>
+    <!-- END BALANCE -->
+
+
+
+
+
+
+    <!-- ACTIONS -->
+    <div class="account-actions-box flex-row margin-side-large">
+        <!-- SEND -->
+        <div class="width-50 flex-row" (click)="openSendingPage()">
+            <div class="send-button flex-auto large-height flex-row heavy-round cursor-pointer fill-company padding-med margin-right-med">
+                <p class="giant-text bold-text white-text margin-center margin-vert">Send</p>
+            </div>
+        </div>
+        <!-- END SEND -->
+        
+
+        <!-- RECEIVE -->
+        <div class="width-50 flex-row" (click)="openReceivingPage()">
+            <div class="receive-button flex-auto large-height flex-row heavy-round cursor-pointer fill-company-dark padding-med margin-left-med">
+                <p class="giant-text bold-text white-text margin-center margin-vert">Receive</p>
+            </div>
+        </div>
+        <!-- END RECEIVE -->
+    </div>
+    <!-- END ACTIONS -->
+
+
+
+
+
+
+
+    <!-- TRANSACTIONS -->
+    <div class="transactions-container flex-auto flex-column contained padding-top-large">
+        <!-- TOP -->
+        <div class="med-height flex-row margin-large">
+            <!-- TABS -->
+            <div class="transactions-tabs-box med-height flex-row pill-round relative fill-backing-dark margin-side-med margin-vert">
+                <!-- SENDING -->
+                <div class="transactions-tab-item flex-row cursor-pointer" (click)="HomePageController.getSendingTransactions()">
+                    <p class="small-text light-text margin-center margin-vert">sending</p>
+                </div>
+                <!-- END SENDING -->
+
+
+
+                <!-- RECEIVING -->
+                <div class="transactions-tab-item flex-row cursor-pointer" (click)="HomePageController.getReceivingTransactions()">
+                    <p class="small-text light-text margin-center margin-vert">receiving</p>
+                </div>
+                <!-- END RECEIVING -->
+
+
+
+                <!-- ARCHIVED -->
+                <div class="transactions-tab-item flex-row cursor-pointer" [ngClass]="{'fill-neutral-light': (true)}"  (click)="HomePageController.getArchivedTransactions()">
+                    <p class="small-text light-text margin-center margin-vert">archived</p>
+                </div>
+                <!-- END ARCHIVED -->
+            </div>
+            <!-- END TABS -->
+            
+
+
+            <!-- REFRESH -->
+            <div class="flex-auto"></div>
+            <div class="med-height flex-row med-round cursor-pointer fill-backing-light padding-side-med margin-side-med">
+                <p class="small-text light-text margin-side-med margin-vert">refresh</p>
+            </div>
+            <!-- END REFRESH -->
+        </div>
+        <!-- END TOP -->
+
+
+
+
+
+
+        <!-- TRANSACTIONS LIST -->
+        <div class="transactions-list-holder flex-auto flex-column contained padding-right-med margin-side-large">
+            <div class="transactions-list-scroll-holder flex-auto scroll-y">
+                <div class="transactions-list flex-column">
+
+                    <!-- TRANSACTION ITEM -->
+                    <div class="relative" *ngFor="let item of HomePageController.display_txs">
+                        <radon-elems-v1-home-page-transaction-item [account_id]="HomePageController.account_id" [txid]="item"></radon-elems-v1-home-page-transaction-item>
+                    </div>
+                    <!-- END TRANSACTION ITEM -->
+
+
+                    <!-- MORE -->
+                    <div class="med-height flex-row med-round cursor-pointer fill-neutral-light padding-med margin-bottom-large margin-center">
+                        <p class="small-text bold-text white-text margin-side-med margin-vert">Load More</p>
+                    </div>
+                    <!-- END MORE -->
+
+                </div>
+            </div>
+        </div>
+        <!-- END TRANSACTIONS LIST -->
+    </div>
+    <!-- END TRANSACTIONS -->
+
+</div>

@@ -1,0 +1,54 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "@apps/*": [
+        "apps/*"
+      ],
+      "@controls/*": [
+        "controls/*"
+      ],
+      "@elements/*": [
+        "elements/*"
+      ],
+      "@controls/radon-client-controls-v1": [
+        "dist/controls/radon-client-controls-v1/controls-radon-client-controls-v1",
+        "dist/controls/radon-client-controls-v1"
+      ],
+      "@elements/radon-elements-v1": [
+        "dist/elements/radon-elements-v1/elements-radon-elements-v1",
+        "dist/elements/radon-elements-v1"
+      ]
+    },
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "checkJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": false,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": false,
+    "strictNullChecks": false
+  }
+}

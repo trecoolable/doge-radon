@@ -1,0 +1,72 @@
+<div class="confirm-interface flex-auto flex-column relative">
+
+    <!-- DETAILS -->
+    <div class="details-box flex-column heavy-round fill-backing-dark padding-large margin-large margin-vert">
+        <p class="giant-text bold-text margin-center">Sending</p>
+
+
+
+        <!-- RECIPIENT -->
+        <div class="med-height"></div>
+        <div class="flex-column margin-large">
+            <p class="small-text light-text">Recipient</p>
+            <p class="detail-value-text large-text bold-text one-line contained margin-top-med">{{SendingPageController.receiving_input.value}}</p>
+        </div>
+        <!-- END RECIPIENT -->
+
+
+
+        <!-- MEMO -->
+        <div class="flex-column margin-large">
+            <p class="small-text light-text">Memo</p>
+            <p class="detail-value-text large-text bold-text one-line contained margin-top-med">{{SendingPageController.memo_input.value}}</p>
+        </div>
+        <!-- END MEMO -->
+
+
+
+        <!-- FEE -->
+        <div class="flex-column margin-large">
+            <p class="small-text light-text">Network Fee</p>
+            <p class="detail-value-text large-text bold-text one-line contained margin-top-med">Ð{{SendingPageController.fee_input.value}}</p>
+        </div>
+        <!-- END FEE -->
+
+
+
+        <!-- AMOUNT -->
+        <div class="large-height"></div>
+        <div class="amount-box flex-column">
+            <p class="light-text margin-bottom-med margin-center">Amount</p>
+
+            <!-- VALUE -->
+            <p class="amount-value-text bold-text margin-center" [ngStyle]="{'font-size': 45 + 'px'}">Ð{{SendingPageController.amount_string | number}}</p>
+            <!-- END VALUE -->
+
+            <p class="bold-text light-text margin-top-large margin-center">DOGE</p>
+        </div>
+        <!-- END AMOUNT -->
+    </div>
+    <!-- END DETAILS -->
+
+
+
+    <div class="flex-auto"></div>
+
+
+
+    <!-- SLIDE -->
+    <div #SlideBoxElement class="slide-box flex-column fill-company absolute" [ngStyle]="{'top': 'calc(100% - (150px + ' + slider_pos.offset + 'px))'}" (mousedown)="sliderStart($event)" (mousemove)="sliderMove($event)" (mouseup)="sliderEnd($event)" (mouseleave)="sliderEnd($event)">
+        <div class="slide-dot-holder cursor-pointer absolute margin-center">
+            <div class="slide-dot circle-round relative cursor-pointer fill-company-light margin-center"></div>
+        </div>
+
+        
+        <div class="flex-column padding-large margin-side-med amrgin-vert">
+            <p class="large-text center-text white-text">This is something here to tell the user that they are responsible for their transaction.
+                They are aware that the transaction is done on their end and we are not managing their funds.
+            </p>
+        </div>
+    </div>
+    <!-- END SLIDE -->
+</div>

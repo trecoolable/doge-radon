@@ -1,0 +1,136 @@
+<div class="details-interface flex-auto flex-column contained">
+    
+    <div class="details-inputs-box flex-auto flex-column padding-large">
+        <!-- ADDRESS -->
+        <div class="flex-column margin-med">
+            <p class="small-text light-text margin-small">Receiving Addreess</p>
+
+
+            <!-- INPUT -->
+            <div class="input-box large-height flex-row med-round fill-backing-dark padding-small margin-top-med">
+                <input class="flex-auto large-text" placeholder="Address" [(ngModel)]="SendingPageController.receiving_input.value">
+                
+                <!-- SCANNER BUTTON -->
+                <div class="scanner-button std-square flex-row light-round cusror-pointer fill-neutral margin-side-small margin-vert">
+                    <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+                </div>
+                <!-- END SCANNER BUTTON -->
+            </div>
+            <!-- END INPUT -->
+
+
+            <!-- MESSAGE -->
+            <div class="med-height flex-row">
+                <p class="red-text margin-side-med margin-vert">{{SendingPageController.receiving_input.message}}</p>
+            </div>
+            <!-- END MESSAGE -->
+        </div>
+        <!-- END ADDRESS -->
+
+
+
+
+
+
+        <!-- MEMO -->
+        <div class="flex-column margin-med margin-top-med">
+            <p class="small-text light-text margin-small">Memo</p>
+
+
+            <!-- INPUT -->
+            <div class="input-box large-height flex-row med-round fill-backing-dark padding-small margin-top-med">
+                <input class="flex-auto large-text" placeholder="Memo" [(ngModel)]="SendingPageController.memo_input.value">
+            </div>
+            <!-- END INPUT -->
+
+
+            <!-- MESSAGE -->
+            <div class="med-height flex-row">
+                <p class="red-text margin-side-med margin-vert">{{SendingPageController.memo_input.message}}</p>
+            </div>
+            <!-- END MESSAGE -->
+        </div>
+        <!-- END MEMO -->
+
+
+
+
+
+
+        <!-- NETWORK FEE -->
+        <div class="flex-column margin-med margin-top-med" (mousemove)="sliderMove($event)"  >
+            <p class="small-text light-text margin-small">Network Fee</p>
+
+
+            <!-- SLIDER -->
+            <div class="large-height flex-row margin-small margin-top-med"  (mouseup)="sliderEnd($event)" (mouseleave)="sliderEnd($event)">
+                <div class="bold-text margin-vert">slow</div>
+                
+                <!-- SLIDER BAR -->
+                <div #FeeSliderElement class="slider-bar flex-auto flex-row pill-round relative fill-company-light margin-side-large">
+
+                    <!-- SLIDER DOT -->
+                    <div #FeeDotElement class="slider-dot-holder flex-row absolute" [ngStyle]="{'left': (fee_pos.diff) + 'px'}" (mousedown)="sliderStart($event)">
+                        <div class="slider-dot med-height flex-row med-round fill-white padding-med margin-vert">
+                            <div class="slider-lines"></div>
+                            <p class="bold-text dark-text margin-vert">{{SendingPageController.fee_input.value}}</p>
+                            <div class="slider-lines"></div>
+                        </div>
+                    </div>
+                    <!-- SLIDER DOT -->
+
+                </div>
+                <!-- END SLIDER BAR -->
+
+                <div class="bold-text margin-vert">fast</div>
+            </div>
+            <!-- END SLIDER -->
+
+
+            <!-- MESSAGE -->
+            <div class="med-height flex-row">
+                <!-- <p class="red-text margin-side-med margin-vert">some error here</p> -->
+            </div>
+            <!-- END MESSAGE -->
+        </div>
+        <!-- END NETWORK FEE -->
+    </div>
+
+
+    
+
+
+    <!-- AMOUNT -->
+    <div class="flex-auto"></div>
+    <div class="amount-box fill-backing-dark padding-large margin-side-large">
+        <p class="small-text margin-med">Amount</p>
+        <!-- VALUE -->
+        <div class="flex-row">
+            <div class="flex-auto flex-column">
+                <p class="amount-value-text flex-auto bold-text" [ngStyle]="{'font-size': 40 + 'px'}">Ð{{SendingPageController.amount_value | number}}</p>
+                <p class="small-text light-text margin-small">Ð1.0000 Network Fee</p>
+            </div>
+
+            <div class="std-height flex-row med-round cursor-pointer fill-neutral padding-side-med margin-side-med margin-vert" style="width: 90px;" (click)="editAmount()">
+                <p class="bold-text margin-center margin-vert">Edit</p>
+            </div>
+        </div>
+        <!-- END VALUE -->
+
+
+
+    </div>
+    <!-- END AMOUNT -->
+
+
+
+    <!-- NEXT -->
+    <div class="bottom-box flex-row fill-backing-light padding-large">
+
+        <div class="large-height flex-auto flex-row pill-round fill-company cursor-pointer padding-med margin-med" (click)="next()">
+            <p class="large-text bold-text white-text margin-center margin-vert">Next</p>
+        </div>
+
+    </div>
+    <!-- END NEXT -->
+</div>

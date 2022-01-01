@@ -1,0 +1,28 @@
+/* AMOUNT */
+.amount-value-box {
+    height: 90px;
+}
+/* END AMOUNT */
+
+
+
+
+
+/* NUMBERS */
+.numbers-box {
+    /* display: grid; */
+    flex-wrap: wrap;
+    white-space: normal;
+}
+
+
+.number-item-box {
+    width: 33.33%;
+    height: 25%;
+}
+
+
+.number-item-text {
+    font-size: 40px;
+}
+/* END NUMBERS */

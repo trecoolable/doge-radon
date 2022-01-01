@@ -1,0 +1,256 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "@apps/radon-client-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/apps/radon-client-app",
+      "sourceRoot": "projects/apps/radon-client-app/src",
+      "prefix": "radon-client-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/radon-client-app",
+            "index": "projects/apps/radon-client-app/src/index.html",
+            "main": "projects/apps/radon-client-app/src/main.ts",
+            "polyfills": "projects/apps/radon-client-app/src/polyfills.ts",
+            "tsConfig": "projects/apps/radon-client-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/apps/radon-client-app/src/favicon.ico",
+              "projects/apps/radon-client-app/src/assets"
+            ],
+            "styles": [
+              "projects/apps/radon-client-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [{
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                  },
+                  {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                  }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/apps/radon-client-app/src/environments/environment.ts",
+                  "with": "projects/apps/radon-client-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "@apps/radon-client-app:build:production"
+            },
+            "development": {
+              "browserTarget": "@apps/radon-client-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "@apps/radon-client-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apps/radon-client-app/src/test.ts",
+            "polyfills": "projects/apps/radon-client-app/src/polyfills.ts",
+            "tsConfig": "projects/apps/radon-client-app/tsconfig.spec.json",
+            "karmaConfig": "projects/apps/radon-client-app/karma.conf.js",
+            "assets": [
+              "projects/apps/radon-client-app/src/favicon.ico",
+              "projects/apps/radon-client-app/src/assets"
+            ],
+            "styles": [
+              "projects/apps/radon-client-app/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "@elements/radon-elements-v1": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/elements/radon-elements-v1",
+      "sourceRoot": "projects/elements/radon-elements-v1/src",
+      "prefix": "radon-elems-v1",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/elements/radon-elements-v1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/elements/radon-elements-v1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/elements/radon-elements-v1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/elements/radon-elements-v1/src/test.ts",
+            "tsConfig": "projects/elements/radon-elements-v1/tsconfig.spec.json",
+            "karmaConfig": "projects/elements/radon-elements-v1/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@controls/radon-client-controls-v1": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true,
+          "flat": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/controls/radon-client-controls-v1",
+      "sourceRoot": "projects/controls/radon-client-controls-v1/src",
+      "prefix": "radon-client-controls-v1",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/controls/radon-client-controls-v1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/controls/radon-client-controls-v1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/controls/radon-client-controls-v1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/controls/radon-client-controls-v1/src/test.ts",
+            "tsConfig": "projects/controls/radon-client-controls-v1/tsconfig.spec.json",
+            "karmaConfig": "projects/controls/radon-client-controls-v1/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@apps/radon-client-app"
+}

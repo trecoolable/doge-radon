@@ -1,0 +1,42 @@
+<div class="accounts-page-container flex-auto flex-column contained">
+    <!-- TOP BAR -->
+    <div class="top-bar-box large-height flex-row padding-large">
+        <p class="giant-text white-text bold-text margin-center margin-vert">My Accounts</p>
+    </div>
+    <!-- END TOP BAR -->
+
+
+    <!-- ACCOUNTS LIST -->
+    <div class="accounts-list-holder flex-auto flex-column contained">
+        <!-- LIST TOP -->
+        <div class="std-height flex-row padding-large">
+            <!-- COUNT -->
+            <p class="bold-text light-text margin-side-large margin-vert">12 Accounts</p>
+            <!-- END COUNT -->
+            
+            
+
+            <!-- NEW ACCOUNT -->
+            <div class="flex-auto"></div>
+            <div class="new-account-button std-height flex-row med-round cursor-pointer fill-company padding-side-large margin-side-med margin-vert" (click)="AccountsPageController.createAccount()">
+                <p class="bold-text white-text margin-center margin-vert">+Add New Account</p>
+            </div>
+            <!-- END NEW ACCOUNT -->
+        </div>
+        <!-- END LIST TOP -->
+
+
+
+
+        <div class="accounts-list-box flex-auto flex-column contained padding-side-med margin-right-med">
+            <div class="accounts-list-scroll-holder flex-auto heavy-round scroll-y">
+                
+                <div class="relative" *ngFor="let item of AccountsPageController.accounts;let idx = index;">
+                    <radon-elems-v1-accounts-page-account-item [info_input]="item" [index]="idx"></radon-elems-v1-accounts-page-account-item>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- END ACCOUNTS LIST -->
+</div>

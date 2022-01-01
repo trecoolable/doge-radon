@@ -1,0 +1,67 @@
+<div class="account-item-box flex-row med-round padding-med margin-large" [ngClass]="{'fill-backing-light': !(index % 2), 'fill-backing-dark': (index % 2)}" *ngIf="(account_info)" (click)="openAccountPage()">
+    <!-- IMAGE -->
+    <div class="image-box margin-med">
+
+    </div>
+    <!-- END IMAGE -->
+
+
+
+
+
+    <!-- INFO -->
+    <div class="info-box flex-auto flex-column margin-med">
+        <!-- NAME -->
+        <div class="flex-row margin-top-small">
+            <p class="bold-text">{{account_info.name}}</p>
+        </div>
+        <!-- END NAME -->
+
+
+
+        <!-- CREATED -->
+        <div class="flex-row margin-top-med">
+            <p class="small-text light-text">created: {{account_info.created_string}}</p>
+        </div>
+        <!-- END CREATED -->
+
+
+
+        <!-- PENDING -->
+        <div class="flex-row margin-top-med">
+            <p class="small-text light-text">pending balance: {{account_info.balance.pending}}</p>
+        </div>
+        <!-- END PENDING -->
+
+
+
+        <!-- BALANCE -->
+        <div class="flex-row margin-top-large">
+            <p class="giant-text bold-text light-text">{{account_info.balance.available}}</p>
+        </div>
+        <!-- END BALANCE -->
+    </div>
+    <!-- END INFO -->
+
+
+
+
+
+    <!-- ACTIONS -->
+    <div class="actions-box flex-row margin-side-med margin-vert">
+        <!-- RECEIVE -->
+        <div class="receive-button std-square flex-row med-round cursor-pointer fill-neutral margin-side-med margin-vert">
+            <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+        </div>
+        <!-- END RECEIVE -->
+
+
+
+        <!-- DELETE -->
+        <div class="delete-button std-square flex-row med-round cursor-pointer fill-neutral margin-side-med margin-vert">
+            <div class="icon-holder med-square fill-light-text margin-center margin-vert"></div>
+        </div>
+        <!-- END DELETE -->
+    </div>
+    <!-- END ACTIONS -->
+</div>

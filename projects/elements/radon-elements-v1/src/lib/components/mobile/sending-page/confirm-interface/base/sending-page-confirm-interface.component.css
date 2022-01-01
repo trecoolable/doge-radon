@@ -1,0 +1,21 @@
+/* SLIDE */
+.slide-box {
+    padding-top: 50px;
+    height: 100vh;
+}
+
+
+.slide-dot-holder {
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    right: 0px;
+}
+
+
+.slide-dot {
+    height: 100px;
+    width: 100px;
+}
+
+/* END SLIDE */

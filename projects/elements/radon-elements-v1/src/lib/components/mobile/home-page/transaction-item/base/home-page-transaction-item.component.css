@@ -1,0 +1,35 @@
+.transaction-item-box {
+    margin: 0px 5px 20px 10px;
+}
+
+/* INFO */
+.info-box {
+    max-width: calc(100% - 150px);
+}
+
+
+.txid-box {
+    height: 12px;
+    max-width: 200px;
+}
+
+
+.memo-box {
+    height: 14px;
+    max-width: 300px;
+}
+
+
+.txid-text,
+.memo-text {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.tx-amount-text {
+    width: 100%;
+    font-size: 30px;
+}
+/* END INFO */

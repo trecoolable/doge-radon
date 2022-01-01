@@ -1,0 +1,38 @@
+<div class="receiving-info-page flex-auto flex-column contained">
+    <radon-elems-v1-home-page-top-bar></radon-elems-v1-home-page-top-bar>
+    
+    <!-- QR CODE -->
+    <div class="qr-code-box flex-column heavy-round fill-backing-dark padding-large margin-top-large margin-side-large relative">
+        <div class="qr-code-strecher width-100" style="padding-top: 100%;"></div>
+
+        <div class="qr-code-image-box height-100 width-100 flex-column absolute" style="top: 0px; left: 0px;">
+            <div class="flex-auto flex-column med-round fill-white padding-large margin-large" style="margin: 20px;">
+                <canvas #QRCodeCanvasElement class="flex-auto"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- END CODE -->
+
+
+
+    <!-- ADDRESS -->
+    <div class="small-height flex-row margin-top-large">
+        <p class="small-text light-text padding-side-large margin-side-large margin-vert">Receiving Address</p>
+    </div>
+    <div class="address-box flex-row heavy-round fill-backing-dark padding-side-large margin-large">
+        <!-- INFO -->
+        <div class="flex-column flex-auto margin-med">
+            <p class="address-value-text white-text margin-small">{{ReceivingInfoPageController.receiving_info.address}}</p>
+        </div>
+        <!-- END INFO -->
+
+
+        <!-- COPY -->
+        <div class="std-height flex-row med-round cursor-pointer fill-neutral margin-side-med margin-vert" style="width: 90px;">
+            <p class="small-text white-text margin-center margin-vert">Copy</p>
+        </div>
+        <!-- END COPY -->
+    </div>
+    <!-- END ADDRESS -->
+
+</div>

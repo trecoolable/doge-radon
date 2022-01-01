@@ -1,0 +1,223 @@
+/* COMPANY */
+.instance-icon {
+    mask-image: url('/assets/images/icons_css/instance-icon.svg');
+}
+
+.source-icon {
+    mask-image: url('/assets/images/icons_css/source-icon.svg');
+}
+
+.campaign-icon {
+    mask-image: url('/assets/images/icons_css/campaign-icon.svg');
+}
+
+/* END COMPANY */
+
+
+
+
+
+/* ITEMS */
+.email-icon {
+    mask-image: url('/assets/images/icons_css/email-icon.svg');
+}
+
+.lock-icon {
+    mask-image: url('/assets/images/icons_css/lock-icon.svg');
+}
+
+.chat-icon {
+    mask-image: url('/assets/images/icons_css/chat-icon.svg');
+}
+
+.bell-on-icon {
+    mask-image: url('/assets/images/icons_css/bell-on-icon.svg');
+}
+
+.bell-off-icon {
+    mask-image: url('/assets/images/icons_css/bell-off-icon.svg');
+}
+
+.menu-icon {
+    mask-image: url('/assets/images/icons_css/menu-icon.svg');
+}
+
+.credit-card-icon {
+    mask-image: url('/assets/images/icons_css/credit-card-icon.svg');
+}
+
+.bank-icon {
+    mask-image: url('/assets/images/icons_css/bank-icon.svg');
+}
+
+.cash-icon {
+    mask-image: url('/assets/images/icons_css/cash-icon.svg');
+}
+
+.gear-icon {
+    mask-image: url('/assets/images/icons_css/gear-icon.svg');
+}
+
+.search-icon {
+    mask-image: url('/assets/images/icons_css/search-icon.svg');
+}
+
+.check-icon {
+    mask-image: url('/assets/images/icons_css/check-icon.svg');
+}
+
+.x-icon {
+    mask-image: url('/assets/images/icons_css/x-icon.svg');
+}
+
+.filter-icon {
+    mask-image: url('/assets/images/icons_css/filter-icon.svg');
+}
+
+.left-caret-icon {
+    mask-image: url('/assets/images/icons_css/left-caret-icon.svg');
+}
+
+.right-caret-icon {
+    mask-image: url('/assets/images/icons_css/right-caret-icon.svg');
+}
+
+.up-caret-icon {
+    mask-image: url('/assets/images/icons_css/up-caret-icon.svg');
+}
+
+.down-caret-icon {
+    mask-image: url('/assets/images/icons_css/down-caret-icon.svg');
+}
+
+.plus-icon {
+    mask-image: url('/assets/images/icons_css/plus-icon.svg');
+}
+
+.user-circle-icon {
+    mask-image: url('/assets/images/icons_css/user-circle-icon.svg');
+}
+
+.alert-triangle-icon {
+    mask-image: url('/assets/images/icons_css/alert-triangle-icon.svg');
+}
+
+.pen-icon {
+    mask-image: url('/assets/images/icons_css/pen-icon.svg');
+}
+
+.more-dots-vert-icon {
+    mask-image: url('/assets/images/icons_css/more-dots-vert-icon.svg');
+}
+
+.eye-on-icon {
+    mask-image: url('/assets/images/icons_css/eye-on-icon.svg');
+}
+
+.eye-off-icon {
+    mask-image: url('/assets/images/icons_css/eye-off-icon.svg');
+}
+
+.font-icon {
+    mask-image: url('/assets/images/icons_css/font-icon.svg');
+}
+
+.open-arrow-icon {
+    mask-image: url('/assets/images/icons/page_open.svg');
+    mask-size: 100.5%;
+    mask-position: center top;
+}
+
+.up-triangle-icon {
+    mask-image: url('/assets/images/icons_css/up-triangle-icon.svg');
+}
+
+.down-triangle-icon {
+    mask-image: url('/assets/images/icons_css/down-triangle-icon.svg');
+}
+
+.starts-with-icon {
+    mask-image: url('/assets/images/icons/starts_with.svg');
+}
+
+.clear-icon {
+    mask-image: url('/assets/images/icons/input_clear.svg');
+}
+
+.copy-icon {
+    mask-image: url('/assets/images/icons/copy-icon.svg');
+}
+
+.admin-icon {
+    mask-image: url('/assets/images/icons/admin-icon.svg');
+}
+
+.cancel-circle-icon {
+    mask-image: url('/assets/images/icons/cancel-circle-icon.svg');
+}
+
+.label-icon {
+    mask-image: url('/assets/images/icons/label-icon.svg');
+}
+
+.label-money-icon {
+    mask-image: url('/assets/images/icons/label-money-icon.svg');
+}
+
+.minimize-icon {
+    mask-image: url('/assets/images/icons_css/minimize-icon.svg');
+}
+
+.lightning-icon {
+    mask-image: url('/assets/images/icons_css/lightning-icon.svg');
+    mask-size: 100.9%;
+}
+
+.attachment-icon {
+    mask-image: url('/assets/images/icons_css/attachment-icon.svg');
+    mask-size: 100.9%;
+}
+
+.code-icon {
+    mask-image: url('/assets/images/icons_css/code-icon.svg');
+    mask-size: 100.9%;
+}
+
+/* END ITEMS */
+
+
+
+
+
+
+
+/* ACTIONS */
+.trash-icon {
+    mask-image: url('/assets/images/icons_css/trash-icon.svg');
+}
+
+.redo-icon {
+    mask-image: url('/assets/images/icons_css/redo-icon.svg');
+}
+
+.reload-icon {
+    mask-image: url('/assets/images/icons_css/reload-icon.svg');
+}
+
+.save-icon {
+    mask-image: url('/assets/images/icons_css/save-icon.svg');
+}
+
+.info-icon {
+    mask-image: url('/assets/images/icons_css/info-icon.svg');
+}
+
+.upload-icon {
+    mask-image: url('/assets/images/icons_css/upload-icon.svg');
+}
+
+.leave-icon {
+    mask-image: url('/assets/images/icons_css/leave-icon.svg');
+}
+
+/* END ACTIONS */

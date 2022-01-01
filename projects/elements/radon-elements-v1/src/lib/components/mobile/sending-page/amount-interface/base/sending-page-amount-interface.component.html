@@ -1,0 +1,58 @@
+<div class="amount-interface flex-auto flex-column contained">
+    <div class="flex-auto flex-column margin-large">
+        <!-- AMOUNT -->
+        <div class="amount-box-holder fill-backing-dark margin-large">
+            <div class="amount-box flex-column padding-large">
+                <p class="bold-text light-text margin-center">Amount</p>
+                
+                <!-- VALUE -->
+                <div class="amount-value-box flex-column margin-center">
+                    <div class="flex-row margin-vert">
+                        <p class="bold-text light-text margin-side-small margin-vert" style="font-size: 30px;">Ð</p>
+                        <p class="amount-text bold-text margin-center margin-vert" [ngStyle]="{'font-size': 50 + 'px'}">{{SendingPageController.amount_string}}</p>
+                    </div>
+                </div>
+                <!-- END VALUE -->
+
+                <p class="large-text bold-text light-text margin-center">DOGE</p>
+            </div>
+        </div>
+        <!-- END AMOUNT -->
+
+
+
+        <!-- MESSAGE -->
+        <div class="std-height flex-row">
+            <p class="center-text red-text margin-center margin-vert">Insufficient Account Balance</p>
+        </div>
+        <!-- END MESSAGE -->
+
+
+
+
+
+        <!-- NUMBERS -->
+        <div class="numbers-box flex-auto flex-row flex-wrap padding-large margin-large">
+
+            <div class="number-item-box flex-column cursor-pointer" *ngFor="let item of [1,2,3,4,5,6,7,8,9,'<',0,'.']" (click)="SendingPageController.handleAmountInput(item)">
+                <p class="number-item-text bold-text white-text margin-center margin-vert">{{item}}</p>
+            </div>
+
+        </div>
+        <!-- END NUMBERS -->
+    </div>
+
+
+
+
+
+    <!-- NEXT -->
+    <div class="bottom-box flex-row fill-backing-light padding-large">
+
+        <div class="large-height flex-auto flex-row pill-round fill-company cursor-pointer padding-med margin-med" (click)="next()">
+            <p class="large-text bold-text white-text margin-center margin-vert">Next</p>
+        </div>
+
+    </div>
+    <!-- END NEXT -->
+</div>
